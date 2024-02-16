@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner; // Clase Scanner
 public class Criba
 {
     // Generar números primos de 1 a max
