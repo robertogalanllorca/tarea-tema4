@@ -15,10 +15,7 @@ public class Criba {
             // Criba
             comprobarPrimo(dim, esPrimo);
             // ¿Cuántos primos hay?
-            int cuenta = 0;
-            for (i = 0; i < dim; i++) {
-                if (esPrimo[i]) cuenta++;
-            }
+            int cuenta = cuentaPrimos(dim, esPrimo);
             // Rellenar el vector de números primos
             int[] primos = new int[cuenta];
             for (i = 0, j = 0; i < dim; i++) {
@@ -30,19 +27,24 @@ public class Criba {
             // Vector vacío
         }
     }
+
+    private static int cuentaPrimos(int dim, boolean[] esPrimo) {
+        int cuenta = 0;
+        for (int i = 0; i < dim; i++) {
+            if (esPrimo[i]) cuenta++;
+        }
+        return cuenta;
+    }
     private static void comprobarPrimo(int dim, boolean[] esPrimo) {
-        int j;
-        int i;
-        for (i = 2; i < Math.sqrt(dim) + 1; i++) {
+        for (int i = 2; i < Math.sqrt(dim) + 1; i++) {
             if (esPrimo[i]) {
                 // Eliminar los múltiplos de i
-                for (j = 2 * i; j < dim; j += i) {
+                for (int j = 2 * i; j < dim; j += i) {
                     esPrimo[j] = false;
                 }
             }
         }
     }
-
     public static void vectorInicial(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) System.out.println();
@@ -55,5 +57,4 @@ public class Criba {
             System.out.print(vector[i] + "\t");
         }
     }
-
 }
