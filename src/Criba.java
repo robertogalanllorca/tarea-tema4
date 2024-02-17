@@ -43,4 +43,10 @@ public class Criba {
             System.out.print(i + 1 + "\t");
         }
     }
+    public static void vectorPrimos(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            if (i % 10 == 0) System.out.println();
+            System.out.print(vector[i] + "\t");
+        }
+    }
 }
