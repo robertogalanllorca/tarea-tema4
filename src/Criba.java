@@ -37,4 +37,10 @@ public class Criba {
             // Vector vacío
         }
     }
+    public static void vectorInicial(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            if (i % 10 == 0) System.out.println();
+            System.out.print(i + 1 + "\t");
+        }
+    }
 }
