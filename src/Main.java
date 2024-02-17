@@ -7,15 +7,9 @@ public class Main {
         int dato = teclado.nextInt();
         int[] vector = new int[dato];
         System.out.println("\nVector inicial hasta: " + dato);
-        for (int i = 0; i < vector.length; i++) {
-            if (i % 10 == 0) System.out.println();
-            System.out.print(i + 1 + "\t");
-        }
+        Criba.vectorInicial(vector);
         vector = Criba.generarPrimos(dato);
         System.out.println("\nVector de primos hasta: " + dato);
-        for (int i = 0; i < vector.length; i++) {
-            if (i % 10 == 0) System.out.println();
-            System.out.print(vector[i] + "\t");
-        }
+        Criba.vectorPrimos(vector);
     }
 }
