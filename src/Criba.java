@@ -36,7 +36,7 @@ public class Criba {
      * @param dim valor entero que corresponde a la longitud del array.
      * @param esPrimo es el array sobre el que declararemos la longitud.
      */
-    private static void initArray(int dim, boolean[] esPrimo) {
+    public static void initArray(int dim, boolean[] esPrimo) {
         for (int i = 0; i < dim; i++) {
             esPrimo[i] = true;
         }
@@ -48,7 +48,7 @@ public class Criba {
      * @param esPrimo es el array sobre el que comprobamos y sacamos la cantidad de números primos.
      * @return la cantidad de números primos que hay en el array.
      */
-    private static int cuentaPrimos(int dim, boolean[] esPrimo) {
+    public static int cuentaPrimos(int dim, boolean[] esPrimo) {
         int cuenta = 0;
         for (int i = 0; i < dim; i++) {
             if (esPrimo[i]) cuenta++;
@@ -61,7 +61,7 @@ public class Criba {
      * @param dim es la longitud del array del cual comprobaremos uno a uno los números.
      * @param esPrimo es el array donde comprobaremos si el número que hay en cada posición es primo.
      */
-    private static void comprobarPrimo(int dim, boolean[] esPrimo) {
+    public static void comprobarPrimo(int dim, boolean[] esPrimo) {
         for (int i = 2; i < Math.sqrt(dim) + 1; i++) {
             if (esPrimo[i]) {
                 // Eliminar los múltiplos de i
