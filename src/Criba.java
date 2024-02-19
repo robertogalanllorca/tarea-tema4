@@ -24,13 +24,13 @@ public class Criba {
         }
     }
 
-    private static void initArray(int dim, boolean[] esPrimo) {
+    public static void initArray(int dim, boolean[] esPrimo) {
         for (int i = 0; i < dim; i++) {
             esPrimo[i] = true;
         }
     }
 
-    private static int cuentaPrimos(int dim, boolean[] esPrimo) {
+    public static int cuentaPrimos(int dim, boolean[] esPrimo) {
         int cuenta = 0;
         for (int i = 0; i < dim; i++) {
             if (esPrimo[i]) cuenta++;
@@ -38,7 +38,7 @@ public class Criba {
         return cuenta;
     }
 
-    private static void comprobarPrimo(int dim, boolean[] esPrimo) {
+    public static void comprobarPrimo(int dim, boolean[] esPrimo) {
         for (int i = 2; i < Math.sqrt(dim) + 1; i++) {
             if (esPrimo[i]) {
                 // Eliminar los múltiplos de i
